@@ -114,43 +114,43 @@ if [ $2 = 'imageboard' ] ; then
           exit 5
       fi
 
-#    for package in ${OPENWRT_PACKAGES[@]}
-#       do
-#         echo "Start install package $package ...."
-#         opkg -d piratebox install $package
-#         if [ $? ne 0 ] ; then
-#               echo "ERROR installing $package"
-#               exit 5
-#         fi
-#      done
-###------------------------------------------
-#  ASH does not support arrays :(
-###-----------------------------------------
-	opkg -d piratebox install perl
-	opkg -d piratebox install perlbase-base 
-	opkg -d piratebox install perlbase-cgi
-	opkg -d piratebox install perlbase-essential
-	opkg -d piratebox install perlbase-file
-	opkg -d piratebox install perlbase-bytes
-	opkg -d piratebox install perlbase-config 
-	opkg -d piratebox install perlbase-data
-	opkg -d piratebox install perlbase-db-file 
-	opkg -d piratebox install perlbase-digest
-	opkg -d piratebox install perlbase-encode
-	opkg -d piratebox install perlbase-encoding
-	opkg -d piratebox install perlbase-fcntl
-	opkg -d piratebox install perlbase-gdbm-file
-	opkg -d piratebox install perlbase-integer
-	opkg -d piratebox install perlbase-socket
-	opkg -d piratebox install perlbase-time
-	opkg -d piratebox install perlbase-unicode
-	opkg -d piratebox install perlbase-unicore
-	opkg -d piratebox install perlbase-utf8
-	opkg -d piratebox install perlbase-xsloader
-	opkg -d piratebox install unzip
+      #    for package in ${OPENWRT_PACKAGES[@]}
+      #       do
+      #         echo "Start install package $package ...."
+      #         opkg -d piratebox install $package
+      #         if [ $? ne 0 ] ; then
+      #               echo "ERROR installing $package"
+      #               exit 5
+      #         fi
+      #      done
+      ###------------------------------------------
+      #  ASH does not support arrays :(
+      ###-----------------------------------------
+    	opkg -d piratebox install perl
+    	opkg -d piratebox install perlbase-base 
+    	opkg -d piratebox install perlbase-cgi
+    	opkg -d piratebox install perlbase-essential
+    	opkg -d piratebox install perlbase-file
+    	opkg -d piratebox install perlbase-bytes
+    	opkg -d piratebox install perlbase-config 
+    	opkg -d piratebox install perlbase-data
+    	opkg -d piratebox install perlbase-db-file 
+    	opkg -d piratebox install perlbase-digest
+    	opkg -d piratebox install perlbase-encode
+    	opkg -d piratebox install perlbase-encoding
+    	opkg -d piratebox install perlbase-fcntl
+    	opkg -d piratebox install perlbase-gdbm-file
+    	opkg -d piratebox install perlbase-integer
+    	opkg -d piratebox install perlbase-socket
+    	opkg -d piratebox install perlbase-time
+    	opkg -d piratebox install perlbase-unicode
+    	opkg -d piratebox install perlbase-unicore
+    	opkg -d piratebox install perlbase-utf8
+    	opkg -d piratebox install perlbase-xsloader
+    	opkg -d piratebox install unzip
 
-	ln -s /usr/local/bin/perl /usr/bin/perl
-	ln -s /usr/local/lib/perl* /usr/lib/
+    	ln -s /usr/local/bin/perl /usr/bin/perl
+    	ln -s /usr/local/lib/perl* /usr/lib/
     fi
 
     echo "------------ Finished OpenWRT Packages ---------------"
@@ -178,7 +178,7 @@ if [ $2 = 'imageboard' ] ; then
        exit 255
     fi
     
-    /usr/local/bin/unzip kareha_* 
+    unzip kareha_* 
     mv kareha/* $PIRATEBOX_FOLDER/share/board 
     rm  -rf $PIRATEBOX_FOLDER/tmp/kareha* 
     

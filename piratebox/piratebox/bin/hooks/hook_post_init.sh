@@ -15,5 +15,5 @@ fi
 . $1
 
 # You can uncommend this line to see when hook is starting:
-# echo "------------------ Running $0 ------------------"
+echo "------------------ Running $0 ------------------"
 
