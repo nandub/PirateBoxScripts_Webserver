@@ -30,8 +30,7 @@ build() {
   # Create directory structures                                                     
   install -m755 -d "$pkgdir/opt/piratebox/bin"                                                
   install -m655 -d "$pkgdir/opt/piratebox/init.d"                             
-  install -m655 -d "$pkgdir/opt/piratebox/conf"                                                
-  install -m655 -d "$pkgdir/opt/piratebox/tmp"
+  install -m655 -d "$pkgdir/opt/piratebox/conf"
   install -m755 -d "$pkgdir/etc/rc.d"
   # Copy files to their respective folders                                          
   cp -Rv piratebox/* "$pkgdir/opt"
