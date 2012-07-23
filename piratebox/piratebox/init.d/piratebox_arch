@@ -4,7 +4,7 @@
 . /etc/rc.d/functions
 
 # PATH for /opt piratebox folder
-export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin/:/usr/local/sbin:/opt/piratebox/bin
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin/:/usr/local/sbin
 
 export PIDFILE_DROOPY=/var/run/piratebox_droopy.pid
 export PIDFILE_HOSTAPN=/var/run/piratebox_hostapd.pid
@@ -20,6 +20,9 @@ export CONF_APN=$PIRATEBOX/conf/hostapd.conf
 export CONF_DNSMASQ=$PIRATEBOX/conf/dnsmasq_generated.conf
 
 export CONF_LIGHTTPD=$PIRATEBOX/conf/lighttpd/lighttpd.conf
+
+ln -sf `which python2` $PIRATEBOX/bin/python
+export PATH=$PIRATEBOX/bin:$PATH
 
 # Some things that run always
 touch /var/lock/piratebox
