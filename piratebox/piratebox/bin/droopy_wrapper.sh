@@ -15,6 +15,6 @@ get_pid() {
 if [ "$1" == "start" ]; then
     $PIRATEBOX/bin/droopy -H $HOST -d $UPLOADFOLDER -c "" -m "$DROOPY_TXT" $DROOPY_USERDIR  $DROOPY_PORT &
 else
-    local PID=$(get_pid)
+    PID=$(get_pid)
     [ -n "$PID" ] && kill $PID &> /dev/null
 fi
