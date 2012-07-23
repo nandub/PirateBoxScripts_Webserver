@@ -10,7 +10,7 @@ get_pid() {
         fi
 }
 
-if [ "$1" == "start"]; then
+if [ "$1" == "start" ]; then
     /usr/sbin/lighttpd -f $CONF_LIGHTTPD 2>&1 &
 else
     local PID=$(get_pid)
