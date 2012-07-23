@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $CONF
+
 pid_file=${PIDFILE_LIGHTTPD}
 
 get_pid() {

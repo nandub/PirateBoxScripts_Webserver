@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $CONF
+
 . /etc/conf.d/dnsmasq
 
 if [ "$1" == "start" ]; then

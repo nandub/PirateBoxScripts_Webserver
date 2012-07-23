@@ -4,22 +4,22 @@
 . /etc/rc.d/functions
 
 # PATH for /opt piratebox folder
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin/:/usr/local/sbin:/opt/piratebox/bin
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin/:/usr/local/sbin:/opt/piratebox/bin
 
-PIDFILE_DROOPY=/var/run/piratebox_droopy.pid
-PIDFILE_HOSTAPN=/var/run/piratebox_hostapd.pid
-PIDFILE_DNSMASQ=/var/run/piratebox_dnsmasq.pid
-PIDFILE_LIGHTTPD=/opt/piratebox/tmp/lighttpd.pid
+export PIDFILE_DROOPY=/var/run/piratebox_droopy.pid
+export PIDFILE_HOSTAPN=/var/run/piratebox_hostapd.pid
+export PIDFILE_DNSMASQ=/var/run/piratebox_dnsmasq.pid
+export PIDFILE_LIGHTTPD=/opt/piratebox/tmp/lighttpd.pid
 
-PIRATEBOX=/opt/piratebox
-CONF=$PIRATEBOX/conf/piratebox.conf
+export PIRATEBOX=/opt/piratebox
+export CONF=$PIRATEBOX/conf/piratebox.conf
 #CONF_DROOPY=/opt/piratebox/conf/droopy.conf #not used
-CONF_APN=$PIRATEBOX/conf/hostapd.conf
+export CONF_APN=$PIRATEBOX/conf/hostapd.conf
 
 #Some extra config files for dnsmasq
-CONF_DNSMASQ=$PIRATEBOX/conf/dnsmasq_generated.conf
+export CONF_DNSMASQ=$PIRATEBOX/conf/dnsmasq_generated.conf
 
-CONF_LIGHTTPD=$PIRATEBOX/conf/lighttpd/lighttpd.conf
+export CONF_LIGHTTPD=$PIRATEBOX/conf/lighttpd/lighttpd.conf
 
 # Some things that run always
 touch /var/lock/piratebox
