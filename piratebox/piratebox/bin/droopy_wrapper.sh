@@ -2,14 +2,14 @@
 
 . /opt/piratebox/conf/piratebox_env.conf
 
-pid_file=${PIDFILE_DROOPY}
+pidfile=${PIDFILE_DROOPY}
 
 get_pid() {
-        if [ -r "${pid_file}" ]; then
-                cat "${pid_file}"
-        else
-                pgrep -f $PIRATEBOX/bin/droopy
-        fi
+    if [ -r "${pidfile}" ]; then
+        cat "${pidfile}"
+    else
+        pgrep -f $PIRATEBOX/bin/droopy
+    fi
 }
 
 if [ "$1" == "start" ]; then
