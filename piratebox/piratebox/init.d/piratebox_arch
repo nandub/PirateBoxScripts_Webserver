@@ -5,16 +5,6 @@
 
 . /opt/piratebox/conf/piratebox_env.conf
 
-# Some things that run always
-touch /var/lock/piratebox
-
-if [ -f $CONF ] ; then
-   . $CONF 
-else 
-   echo "Configuration file not found"
-   exit 1
-fi
-
 # Do basic initialization on non-openWRT Systems, too
 if [[ -f $PIRATEBOX/conf/init_done ]] ; then
    INIT=OK
