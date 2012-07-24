@@ -28,6 +28,7 @@ fi
 if [ "$1" == "start" ]; then
     if [[ -z $PID ]] && checkconfig &&
         /usr/bin/dnsmasq "--user=${DNSMASQ_USER:-nobody}" \
+        				  "--conf-file=${CONF_DNSMASQ}" \
                           "--pid-file=$pidfile" \
                           "${DNSMASQ_OPTS[@]}"; then
         echo "dnsmasq started."
