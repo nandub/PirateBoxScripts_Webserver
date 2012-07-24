@@ -33,6 +33,7 @@ test_config() {
 }
 
 if [ "$1" == "start" ]; then
+	test_config
     PID=$(get_pid)
 	if [ -z "$PID" ]; then
 		nohup /usr/sbin/lighttpd-angel -D -f ${CONF_LIGHTTPD} >>/var/log/lighttpd/lighttpd-angel.log 2>&1 &
@@ -46,6 +47,7 @@ if [ "$1" == "start" ]; then
         echo "lighttpd failed to start."
     fi
 else
+	test_config
     PID=$(get_pid)
     [ -n "$PID" ] && kill $PID &> /dev/null
     if [ $? -gt 0 ]; then

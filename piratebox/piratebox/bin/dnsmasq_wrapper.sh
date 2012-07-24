@@ -30,12 +30,16 @@ if [ "$1" == "start" ]; then
         /usr/bin/dnsmasq "--user=${DNSMASQ_USER:-nobody}" \
                           "--pid-file=$pidfile" \
                           "${DNSMASQ_OPTS[@]}"; then
+        echo "dnsmasq started."
     else
-      echo "dnsmasq is already started."
+        echo "dnsmasq failed to start."
     fi
 else
     if [[ $PID ]] && kill "$PID" &> /dev/null; then
       # dnsmasq doesn't clean up after itself
-      rm -f "$pidfile"
+        rm -f "$pidfile"
+        echo "dnsmasq stopped."
+    else
+    	echo "dnsmasq failed to stop."
     fi
 fi
