@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $CONF
+. /opt/piratebox/conf/piratebox_env.conf
 
 if [ "$1" == "start" ]; then
     /usr/bin/hostapd -B -P ${PIDFILE_HOSTAPN} ${CONF_APN} &>/dev/null

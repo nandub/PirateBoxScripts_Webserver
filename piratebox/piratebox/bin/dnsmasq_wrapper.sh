@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $CONF
+. /opt/piratebox/conf/piratebox_env.conf
 
 . /etc/conf.d/dnsmasq
 

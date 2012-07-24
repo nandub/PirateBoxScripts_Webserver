@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $CONF
+. /opt/piratebox/conf/piratebox_env.conf
 
 pid_file=${PIDFILE_DROOPY}
 
