@@ -33,7 +33,7 @@ build() {
   install -m655 -d "$pkgdir/opt/piratebox/conf"
   install -m755 -d "$pkgdir/etc/rc.d"
   # Copy files to their respective folders                                          
-  cp -Rv piratebox/* "$pkgdir/opt"
+  cp -R piratebox/* "$pkgdir/opt"
   ln -s "/opt/piratebox/init.d/piratebox_arch" "$pkgdir/etc/rc.d/piratebox"
 }
 # vim:set ts=2 sw=2 et:
