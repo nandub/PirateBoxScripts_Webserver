@@ -6,7 +6,7 @@ pkgdesc="PirateBox Scriptcollection for running in Webserver"
 arch=('i686', 'x86_64')
 url="https://github.com/nandub/PirateBoxScripts_Webserver"
 license=('GPL-3')
-depends=('hostapd' 'dnsmasq' 'lighttpd' 'unzip')
+depends=('hostapd' 'dnsmasq' 'lighttpd' 'bridge-utils' 'unzip')
 makedepends=('git')
 
 _gitroot=https://github.com/nandub/PirateBoxScripts_Webserver.git
