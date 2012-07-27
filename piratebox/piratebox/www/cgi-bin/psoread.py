@@ -12,10 +12,11 @@ stl = css.read()
 dat = data.read()
 css.close()
 data.close()
-print "Content-type:text/html\r\n\r\n"
-print "<html><head><meta name='GENERATOR' content='PyShoutOut'><title>Shout-Out Data</title><style type='text/css'>"
-print stl
-print "</style></head>"
-print "<body>"
-print dat
-print "</body>"
+print ("Content-type:text/html")
+print ("")
+print ("<html><head><meta name='GENERATOR' content='PyShoutOut'><title>Shout-Out Data</title><style type='text/css'>")
+print (stl)
+print ("</style></head>")
+print ("<body>")
+print (dat)
+print ("</body>")
