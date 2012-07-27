@@ -100,6 +100,8 @@ if [ $2 = 'part2' ] ; then
       cp $PIRATEBOX_FOLDER/src/kareha.pl $PIRATEBOX_FOLDER/share/board
    fi
    
+   rm $PIRATEBOX_FOLDER/www/board
+   rm $PIRATEBOX_FOLDER/www/Shared
    ln -s $PIRATEBOX_FOLDER/share/board $PIRATEBOX_FOLDER/www/board
    ln -s $UPLOADFOLDER  $PIRATEBOX_FOLDER/www/Shared
 fi 
